@@ -1,0 +1,51 @@
+<mxfile host="65bd71144e">
+    <diagram id="UV-O2sAx2KZoK0ahB6fU" name="Page-1">
+        <mxGraphModel dx="1205" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="USER&lt;hr&gt;&lt;font color=&quot;#e11414&quot;&gt;(PK)&lt;/font&gt; ID : int&lt;br&gt;EMAIL: string&lt;br&gt;PASSWORD : varchar&lt;br&gt;RANK : int&lt;br&gt;NOM : varchar&lt;br&gt;PRENOM : varchar&lt;br&gt;ACTIVE : int&lt;br&gt;CONTRAT : varchar&lt;br&gt;DATE : date" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="10" width="120" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontColor=#ed1212;" edge="1" parent="1" source="3" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="PROJET&lt;hr&gt;&lt;font color=&quot;#ed1212&quot;&gt;(PK)&lt;/font&gt; ID : int&lt;br&gt;NOM : string&lt;br&gt;DATE_DEBUT : date&lt;br&gt;DATE_FIN : date&lt;br&gt;LIST_EMPLOYE : varchar" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="320" width="140" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="TACHE&lt;hr&gt;&lt;font color=&quot;#e71313&quot;&gt;(PK)&amp;nbsp;&lt;/font&gt;ID : int&lt;br&gt;&lt;font color=&quot;#f20707&quot;&gt;(FK) &lt;/font&gt;PROJET_ID : int&lt;br&gt;TITRE : varchar&lt;br&gt;DESCRIPTION : varchar&lt;br&gt;DEAD_LINE : date&lt;br&gt;EMPLOYE_ID: int&lt;br&gt;TYPE&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;(BACK-FRONT) : int&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;font color=&quot;#da0707&quot;&gt;(FK) &lt;/font&gt;Statut_ID : int&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#f41010&quot;&gt;(FK) &lt;/font&gt;&lt;font color=&quot;#f0efef&quot;&gt;TAG_ID&lt;/font&gt;: int&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="370" y="320" width="140" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="CRENEAU&lt;hr&gt;&lt;font color=&quot;#ef0b0b&quot;&gt;(PK)&amp;nbsp;&lt;/font&gt;ID : int&lt;br&gt;&lt;font color=&quot;#e70808&quot;&gt;(FK)&lt;/font&gt; USER_ID : int&lt;br&gt;&lt;font color=&quot;#e71313&quot;&gt;(FK)&lt;/font&gt; TACHE_ID : int&lt;br&gt;&lt;font style=&quot;&quot;&gt;DATE_DEBUT : date&lt;br&gt;DATE_FIN : date&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="90" width="120" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="STATUT&lt;hr&gt;ID : int&lt;br&gt;TITRE : string&lt;br&gt;&lt;font color=&quot;#ec0909&quot;&gt;(FK) &lt;/font&gt;PROJET_ID : int" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="670" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="TAG&lt;hr&gt;ID : int&lt;br&gt;TITRE : int&lt;br&gt;&lt;font color=&quot;#e41111&quot;&gt;(fk)&lt;/font&gt; PROJET_ID : int" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="285" y="670" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="curved=1;endArrow=classic;html=1;entryX=-0.033;entryY=0.295;entryDx=0;entryDy=0;exitX=1;exitY=0.215;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="260" as="sourcePoint"/>
+                        <mxPoint x="450" y="210" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="410" y="100"/>
+                            <mxPoint x="400" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="" style="curved=1;endArrow=classic;html=1;exitX=0.993;exitY=0.185;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="5" target="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="260" as="sourcePoint"/>
+                        <mxPoint x="450" y="210" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="590" y="360"/>
+                            <mxPoint x="410" y="190"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
